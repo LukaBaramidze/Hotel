@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Rooms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #hotelList {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .product-item {
+            width: 80%;
+            height: 50px;
+            text-align: center;
+            margin: 10px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .check-button {
+            background-color: #4caf50;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            cursor: pointer;
+            width: 100px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            background: #ffffff;
+            border-radius: 0.5em;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            transform: translate(-50%, -50%);
+            width: 30em;
+            text-align: left;
+            max-height: 90vh;
+            left: 50%;
+            top: 50%;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            padding: 20px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>Welcome to Luka's Hotel</h1>
+<ul id="hotelList"></ul>
+<div id="roomModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalHotelName"></h2>
+        <ul id="modalRoomList"></ul>
+    </div>
+</div>
+<script src="script.js" defer></script>
+</body>
+</html>
